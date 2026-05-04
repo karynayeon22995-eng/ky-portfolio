@@ -13,22 +13,22 @@
 
 /* ---- DESIGN TOKENS ---- */
 :root {
-  /* Colors — Teal & Warm Dark (Claude-inspired) */
+  /* Colors — Clean Light Theme */
   --primary:        #0891B2;
   --primary-hover:  #0E7490;
-  --primary-light:  rgba(8,145,178,0.12);
-  --primary-border: rgba(8,145,178,0.25);
+  --primary-light:  rgba(8,145,178,0.08);
+  --primary-border: rgba(8,145,178,0.18);
 
-  --surface:        #1C1B19;   /* warm dark surface — Claude-style */
-  --bg:             #111110;   /* warm near-black */
-  --bg-alt:         #161513;   /* warm dark alt */
+  --surface:        #FFFFFF;   /* white card/panel */
+  --bg:             #F8F7F4;   /* warm off-white page */
+  --bg-alt:         #F0EEE8;   /* warm tint section */
 
-  --text-primary:   #F5F4EF;   /* warm ivory white */
-  --text-secondary: rgba(255,255,255,0.55);
-  --text-muted:     rgba(255,255,255,0.28);
+  --text-primary:   #141413;   /* near-black */
+  --text-secondary: #5E5D59;   /* mid gray */
+  --text-muted:     #9C9A93;   /* light gray */
 
-  --border:         rgba(255,255,255,0.06);
-  --border-strong:  rgba(255,255,255,0.12);
+  --border:         rgba(20,20,18,0.08);
+  --border-strong:  rgba(20,20,18,0.15);
 
   /* Sub-color palette */
   --blue:    #0891B2;   /* brand teal */
@@ -44,11 +44,11 @@
   --pink:    #f472b6;
   --orange:  #fb923c;
 
-  /* Elevation — dark-optimized */
+  /* Elevation — light-optimized */
   --shadow-0: none;
-  --shadow-1: 0 1px 4px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.04);
-  --shadow-2: 0 4px 20px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.05);
-  --shadow-3: 0 12px 40px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.06);
+  --shadow-1: 0 1px 4px rgba(0,0,0,.07), 0 0 0 1px rgba(20,20,18,.06);
+  --shadow-2: 0 4px 20px rgba(0,0,0,.10), 0 0 0 1px rgba(20,20,18,.06);
+  --shadow-3: 0 12px 40px rgba(0,0,0,.14), 0 0 0 1px rgba(20,20,18,.06);
 
   /* Radius — styleguide scale */
   --radius-sm: 4px;
@@ -367,8 +367,8 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 70% 30%, rgba(8,145,178,0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(8,145,178,0.03) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 50% at 70% 30%, rgba(8,145,178,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(20,184,166,0.03) 0%, transparent 50%);
   pointer-events: none;
 }
 .hero-inner {
@@ -534,7 +534,7 @@ h1, h2, h3, h4 {
 
 /* ============ PAGE HEADERS (for subpages) — DARK REDESIGN ============ */
 .page-header {
-  background: #111110;
+  background: #F8F7F4;
   padding: 140px 0 72px;
   position: relative;
   overflow: hidden;
@@ -1859,7 +1859,7 @@ h1, h2, h3, h4 {
 
 /* ---- 1A: DARK HERO ---- */
 .hero {
-  --hero-bg: #111110;
+  --hero-bg: #F8F7F4;
   background: var(--hero-bg);
   border-bottom-color: rgba(255,255,255,0.07);
   overflow: hidden;
@@ -2034,7 +2034,7 @@ h1, h2, h3, h4 {
 .page-transition-overlay {
   position: fixed;
   inset: 0;
-  background: #111110;
+  background: #F8F7F4;
   z-index: 100000;
   pointer-events: none;
   opacity: 0;
@@ -2524,7 +2524,7 @@ h1, h2, h3, h4 {
 .about-pill:hover { background: rgba(8,145,178,0.1); border-color: var(--primary-border); }
 
 /* Section bg-surface override */
-.bg-surface { background: #161513; }
+.bg-surface { background: #F0EEE8; }
 
 /* Course featured card */
 .tier-2.is-featured {
@@ -2578,14 +2578,14 @@ h1, h2, h3, h4 {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(8,145,178,0.15);
 }
-.form-field select option { background: #1C1B19; color: var(--text-primary); }
+.form-field select option { background: #FFFFFF; color: var(--text-primary); }
 
 /* Social chips */
 .social-chip { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: var(--text-secondary); }
 .social-chip:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
 
 /* Footer */
-.footer { background: #111110; border-top-color: rgba(255,255,255,0.06); }
+.footer { background: #141413; border-top-color: rgba(255,255,255,0.06); }
 .fsoc { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.09); }
 .fsoc:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
 .footer-col a:hover { color: var(--primary); }
@@ -2632,7 +2632,7 @@ h1, h2, h3, h4 {
 .service-card-v2 { background: var(--surface); border-color: var(--border); }
 
 /* Contact split — form panel */
-.contact-form-panel { background: #161513; }
+.contact-form-panel { background: #F0EEE8; }
 
 /* ============================================================
    PRICING TABLE SYSTEM — Reference-inspired
@@ -2649,7 +2649,7 @@ h1, h2, h3, h4 {
 
 /* Base card */
 .pt-card {
-  background: #1C1B19;
+  background: #FFFFFF;
   border: 1px solid rgba(255,255,255,0.09);
   border-radius: 14px;
   overflow: hidden;
@@ -3675,3 +3675,138 @@ h1, h2, h3, h4 {
   .hs-desc { font-size: 15px; }
   .hs-pains li { font-size: 14px; }
 }
+
+/* ============================================================
+   LIGHT THEME — Global text & component overrides
+   Fixes hardcoded rgba(255,255,255,...) and color:#fff that
+   were written for dark backgrounds.
+   ============================================================ */
+
+/* ── Orbs: subtle on light bg ── */
+.hero-orb { opacity: 0.35; }
+
+/* ── Navbar ── */
+.navbar { background: rgba(248,247,244,0.92); border-bottom-color: rgba(20,20,18,0.08); }
+.nav-link { color: var(--text-secondary); }
+.nav-link:hover { color: var(--text-primary); background: rgba(20,20,18,0.05); }
+.navbar.hero-visible .nav-link               { color: var(--text-secondary); }
+.navbar.hero-visible .nav-link:hover         { color: var(--text-primary); background: rgba(20,20,18,0.06); }
+.navbar.hero-visible .nav-link.nav-active    { color: var(--primary); background: var(--primary-light); }
+.navbar.hero-visible .logo-wordmark          { color: var(--text-primary); }
+.navbar.hero-visible .logo-mark              { background: var(--primary-light); color: var(--primary); }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); }
+::selection { background: var(--primary-light); color: var(--primary); }
+
+/* ── Hero Simple (index.html) ── */
+.hero-simple { background: var(--bg); }
+.hs-pains-label { color: var(--text-muted); }
+.hs-pains li { color: var(--text-secondary); }
+.hs-pains li em { color: var(--text-primary); font-weight: 600; }
+.hs-pains li::before { color: #EF4444; }
+.hs-divider-line {
+  background: linear-gradient(to bottom, transparent 0%, var(--border-strong) 30%, var(--border-strong) 70%, transparent 100%);
+}
+.hs-headline { color: var(--text-primary); }
+.hs-desc { color: var(--text-secondary); }
+.hero-simple .btn-secondary {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+.hero-simple .btn-secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+/* ── Page header ── */
+.page-header { background: var(--bg); border-bottom: 1px solid var(--border); }
+.page-header .section-label { color: var(--primary); }
+.page-header .page-title { color: var(--text-primary); }
+.page-header .page-title em { color: var(--primary); }
+.page-header .page-desc { color: var(--text-secondary); }
+.page-header .breadcrumb a { color: var(--text-muted); }
+.page-header .breadcrumb a:hover { color: var(--primary); }
+
+/* ── Section & bg-surface ── */
+.bg-surface { background: var(--bg-alt); }
+.section-label { color: var(--primary); }
+.section-title { color: var(--text-primary); }
+.section-desc { color: var(--text-secondary); }
+
+/* ── Cards (pt-card pricing) ── */
+.pt-card {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-2);
+}
+.pt-card.pt-featured { border-color: var(--primary-border); }
+.pt-card.pt-premium  { border-color: rgba(20,20,18,0.18); }
+.pt-tier-label { color: var(--primary); }
+.pt-name { color: var(--text-primary); }
+.pt-caption { color: var(--text-secondary); }
+.pt-feat { color: var(--text-secondary); }
+.pt-feat.feat-hi { color: var(--text-primary); }
+.pt-feat-section-label { color: var(--text-muted); }
+.fcheck { color: var(--primary); }
+.fb-gray { background: var(--bg-alt); color: var(--text-muted); border-color: var(--border); }
+.fb-blue { background: var(--primary-light); color: var(--primary); border-color: var(--primary-border); }
+
+/* ── Session cards (course pages) ── */
+.session-card {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-1);
+}
+.session-card:hover { border-color: var(--primary-border); box-shadow: var(--shadow-2); }
+.session-level-tag { background: var(--primary-light); color: var(--primary); border-color: var(--primary-border); }
+.session-num { color: var(--text-muted); }
+.session-title { color: var(--text-primary); }
+.session-desc { color: var(--text-secondary); }
+.session-topics li { color: var(--text-secondary); }
+.session-topics .fcheck { color: var(--primary); }
+
+/* ── Phase nav ── */
+.phase-nav-item { background: var(--surface); border-color: var(--border); }
+.phase-nav-item:hover { border-color: var(--primary-border); }
+.pn-label { color: var(--primary); }
+.pn-title { color: var(--text-primary); }
+.pn-meta  { color: var(--text-muted); }
+
+/* ── Course compare grid ── */
+.course-track-title { color: var(--text-primary); }
+.course-track-desc  { color: var(--text-secondary); }
+
+/* ── Chips & social chips ── */
+.chip     { background: var(--bg-alt); border-color: var(--border); color: var(--text-secondary); }
+.chip-sm  { background: var(--bg-alt); border-color: var(--border); color: var(--text-muted); }
+.chip:hover { background: var(--primary-light); border-color: var(--primary-border); color: var(--primary); }
+.social-chip { background: var(--bg-alt); border-color: var(--border); color: var(--text-secondary); }
+
+/* ── Course bands (gradient sections) ── */
+.course-band-t2 { background: linear-gradient(135deg, var(--primary-hover), var(--primary)); }
+.ctv2-top-t2    { background: linear-gradient(135deg, var(--primary-hover), var(--primary)); }
+.course-band-tag, .course-band-name, .course-band-caption { color: #fff; }
+
+/* ── Contact form ── */
+.contact-form-panel { background: var(--surface); border-color: var(--border); }
+.form-field select option { background: var(--surface); color: var(--text-primary); }
+
+/* ── CTA section ── */
+.cta-section { background: var(--bg-alt); }
+.cta-heading { color: var(--text-primary); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); }
+
+/* ── Footer stays dark — keep existing styles ── */
+.footer                  { background: #141413 !important; }
+.footer h4               { color: rgba(255,255,255,0.9); }
+.footer p, .footer li a  { color: rgba(255,255,255,0.5); }
+.footer li a:hover       { color: #fff; }
+.footer-bottom           { border-top-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.35); }
+.fsoc                    { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); }
+.fsoc:hover              { background: var(--primary); border-color: var(--primary); }
+
